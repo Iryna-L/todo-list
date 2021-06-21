@@ -18,6 +18,13 @@ const mutations = {
     state.list = state.list.filter(item => {
       return item.index !== index
     })
+    
+    state.list = state.list.map((item) => {
+      if (item.index > index) {
+        item.index = item.index - 1
+      }
+      return item
+    })
   },
   EDIT_TODO(state, payload) {
     state.list = state.list.map(item => {

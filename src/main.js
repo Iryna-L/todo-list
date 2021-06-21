@@ -5,6 +5,7 @@ import store from './store'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+import 'material-icons/iconfont/material-icons.css';
 
 Vue.use(VueMaterial)
 

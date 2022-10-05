@@ -1,9 +1,7 @@
 <template>
   <div class="todos">
     <h1>TO DO LIST</h1>
-
     <div>
-      
       <create-todo
         :showModal="showCreateModal"
         @close="showCreateModal = false"

@@ -24,4 +24,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 </style>

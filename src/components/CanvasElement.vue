@@ -191,9 +191,4 @@ export default {
     min-height: 400px;
   }
 }
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 </style>

@@ -1,4 +1,4 @@
-const checkStorage = () => {
+export const checkStorage = () => {
   if (window.localStorage.getItem('todosData')) {
     try {
       return JSON.parse(window.localStorage.getItem('todosData'))
@@ -11,9 +11,8 @@ const checkStorage = () => {
   }
 }
 
-const saveToStorage = (value) => window.localStorage.setItem('todosData', JSON.stringify(value))
+export const saveToStorage = (value) => window.localStorage.setItem('todosData', JSON.stringify(value))
 
-export default {
-  checkStorage,
-  saveToStorage
-}
+
+
+

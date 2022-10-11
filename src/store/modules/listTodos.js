@@ -1,4 +1,4 @@
-import localStorage from '../../utils/localStorage'
+import { checkStorage, saveToStorage } from '../../utils/localStorage'
 
 const state = () => {
   return {
@@ -51,29 +51,28 @@ const mutations = {
 
 const actions = {
   async getTodos({ commit }) {
-    const data = localStorage.checkStorage() || []
-
+    const data = checkStorage() || []
     commit('GET_TODOS_SUCCESS', data)
   },
   createToDo({ state, commit }, payload) {
     commit('ADD_TODO', { index: state.list.length, ...payload})
-    localStorage.saveToStorage(state.list)
+    saveToStorage(state.list)
   },
   deleteTodo({ state, commit }, index) {
     commit('DELETE_TODO', index)
-    localStorage.saveToStorage(state.list)
+    saveToStorage(state.list)
   },
   editToDo({ state, commit }, payload) {
     commit('EDIT_TODO', payload)
-    localStorage.saveToStorage(state.list)
+    saveToStorage(state.list)
   },
   completeTodo({ state, commit }, index) {
     commit('COMPLETE_TODO', index)
-    localStorage.saveToStorage(state.list)
+    saveToStorage(state.list)
   },
   savePictureInTodo({ state, commit }, {picture, index}) {
     commit('SAVE_PICTURE', { picture, index })
-    localStorage.saveToStorage(state.list)
+    saveToStorage(state.list)
   }
 }
 

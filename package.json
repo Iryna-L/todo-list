@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "npm run lint & npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -31,7 +32,11 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "browser": true
+    },
+    "globals": {
+      "Promise": "off"
     },
     "extends": [
       "plugin:vue/essential",
@@ -40,7 +45,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-duplicate-imports": "error"
+    }
   },
   "browserslist": [
     "> 1%",

@@ -15,7 +15,7 @@
       />
 
       <div v-show="list.length" class="todos">
-        <md-button @click="showCreateModal = true" class="md-raised md-primary">Create</md-button>
+        <button @click="showCreateModal = true" class="md-raised md-primary">Create</button>
         <div class="todos-item" v-for="todo in list" :key="todo.id">
           <todo-item
             @deleted="submitDeleteTodo"
@@ -32,7 +32,7 @@
           md-label="Create your first todo"
           md-description=""
         >
-          <md-button @click="showCreateModal = true" class="md-primary md-raised">Create first todo</md-button>
+          <button @click="showCreateModal = true" class="md-primary md-raised">Create first todo</button>
         </md-empty-state>
       </div>
     </div>

@@ -17,8 +17,8 @@
       </md-field>
       </div>
       <md-dialog-actions>
-        <md-button class="md-primary" @click="$emit('close')">Close</md-button>
-        <md-button @click="submitEditing" class="md-raised md-primary">Edit</md-button>
+        <button class="md-primary" @click="$emit('close')">Close</button>
+        <button @click="submitEditing" class="md-raised md-primary">Edit</button>
       </md-dialog-actions>
     </md-dialog>
   </div>

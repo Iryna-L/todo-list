@@ -4,26 +4,26 @@
       <md-toolbar md-elevation="0" class="flex">
         <div class="flex">
           <input type="color" v-model="color" />
-          <md-button
+          <button
             class="md-primary"
             :class="{ 'md-raised': pencilActivated }"
             @click="togglePencilActivated"
-            >pencil</md-button
+            >pencil</button
           >
-          <md-button
+          <button
             class="md-primary"
             :class="{ 'md-raised': drawRectActivated }"
             @click="toggleDrawRect"
-            >Draw Rectangle</md-button
+            >Draw Rectangle</button
           >
         </div>
 
         <div>
-          <md-button @click="savePicture" class="md-raised md-primary"
-            >Save picture</md-button
+          <button @click="savePicture" class="md-raised md-primary"
+            >Save picture</button
           >
-          <md-button @click="clearPicture" class="md-raised md-accent"
-            >Clear Picture</md-button
+          <button @click="clearPicture" class="md-raised md-accent"
+            >Clear Picture</button
           >
         </div>
       </md-toolbar>

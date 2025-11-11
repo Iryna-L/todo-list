@@ -1,18 +1,10 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import axios from 'axios'
 import store from './store'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css'
-import 'material-icons/iconfont/material-icons.css';
 
-Vue.use(VueMaterial)
+const app = createApp(App)
 
-Vue.config.productionTip = false
-Vue.prototype.$http = axios
-
-new Vue({
-  render: h => h(App),
-  store,
-}).$mount('#app')
+app.config.globalProperties.$http = axios
+app.use(store)
+app.mount('#app')

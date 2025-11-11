@@ -1,11 +1,10 @@
-import Vuex from 'vuex'
+// store/index.js (Vue 3 + Vuex 4)
+import { createStore } from 'vuex'
 import listTodos from './modules/listTodos'
-import Vue from 'vue'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
+export default createStore({
   modules: {
-    listTodos
-  }
+    listTodos,
+  },
 })
+

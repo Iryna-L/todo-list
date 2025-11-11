@@ -22,20 +22,20 @@
 
         <div class="flex">
           
-        <md-button class="md-primary" @click="toggleCanvas">
+        <button class="md-primary" @click="toggleCanvas">
             
             <span  class="material-icons">
               format_paint
             </span>
-        </md-button>
+        </button>
          
           <div>
-            <md-button @click="handleDeleteTodo" class="md-accent">
+            <button @click="handleDeleteTodo" class="md-accent">
               <span class="material-icons-outlined"> delete </span>
-            </md-button>
+            </button>
 
-            <md-button @click="$emit('edit', todo)" class="md-primary">
-              <span class="material-icons-outlined"> edit_note </span></md-button>
+            <button @click="$emit('edit', todo)" class="md-primary">
+              <span class="material-icons-outlined"> edit_note </span></button>
           </div>
           
         </div>
